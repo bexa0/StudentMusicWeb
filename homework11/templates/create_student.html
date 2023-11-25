@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Student</title>
+</head>
+<body>
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <label>Name</label>
+            <input type="text" name="name"><br>
+            <br>
+
+            <label>Surname</label>
+            <input type="text" name="surname"><br>
+            <br>
+
+            <label>Age</label>
+            <input type="number" name="age"><br>
+            <br>
+
+            <label>Course</label>
+            <input type="number" name="course"><br>
+            <br>
+
+            <select name="musical_instrument">
+                {% for instrument in instrument_list %}
+                    <option value="{{ instrument.pk }}">{{ instrument }}</option>
+                {% endfor %}
+            </select><br>
+            <br>
+
+            <label>Grade</label>
+            <input type="number" min="1" max="12" name="grade"><br>
+            <br>
+
+            <label>Payment</label>
+            <input type="checkbox" name="payment" value="payment"><br>
+            <br>
+
+            <input type="submit" value="Create">
+        </form>
+    </div>
+    <p><a href="{% url 'main_page' %}">Back</a></p>
+</body>
+</html>

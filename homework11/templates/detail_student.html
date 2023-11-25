@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail Student</title>
+</head>
+<body>
+    <form method="POST">
+        <p>Name: {{ students_slug.name }}</p>
+        <p>Surname: {{ students_slug.surname }}</p>
+        <p>Age: {{ students_slug.age }}</p>
+        <p>Course_num: {{ students_slug.course }}</p>
+        <p>Musical Instrument: {{ students_slug.musical_instrument }}</p>
+        <p>Grade: {{ students_slug.grade }}</p>
+        <p>Payment: {{ students_slug.payment }}</p>
+    </form>
+    <p><a href="{% url 'main_page' %}">Back</a></p>
+</body>
+</html>
